@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# CDK
+.cdk.staging/
+cdk.out/
+cdk.context.json
+
+# Filled-in IAM policy (contains a real account ID / OIDC ID) - keep the
+# .template.json tracked, not this
+iam/ebs-csi-trust-policy.json
+
+# Editors / OS
+*.swp
+.idea/
+.vscode/
+.DS_Store
+
+# Local env
+.env

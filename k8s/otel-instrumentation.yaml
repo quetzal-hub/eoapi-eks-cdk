@@ -1,0 +1,13 @@
+apiVersion: opentelemetry.io/v1alpha1
+kind: Instrumentation
+metadata:
+  name: eoapi-instrumentation
+  namespace: eoapi
+spec:
+  exporter:
+    endpoint: http://jaeger.eoapi.svc.cluster.local:4318
+  propagators:
+    - tracecontext
+    - baggage
+  sampler:
+    type: parentbased_always_on
